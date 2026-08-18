@@ -3,11 +3,12 @@
 using namespace std;
 class Student{
 private:
+//public:
   string name;
   int rollNo;
   float marks;
 
-public:
+//public:
   void inputDetails() {
     cout<<"Enter Student Name:";
     getline(cin>>ws,name);
@@ -16,8 +17,8 @@ public:
     cout<<"Enter Marks:";
     cin>>marks;
   }
-  
-  void displayDetails() const {
+  public:
+  void displayDetails() {
     cout<<"\n----Student Details----\n";
     cout<<"Name:"<<name<<endl;
     cout<<"Roll No:"<<rollNo<<endl;
@@ -26,8 +27,9 @@ public:
 };
 
 int main(){
-    Student s;
-    s.inputDetails();
+    student s;
+   // s.rollNo=100;
     s.displayDetails();
+    s.inputDetails();
     return 0;
 }
